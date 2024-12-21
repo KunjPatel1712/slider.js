@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: greenyellow;
+        }
+        div
+        {
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="texts"></div>
+    <script>
+       let quotes  =[
+                        "It is hard to fail but it is worse never to have tried to succeed.",
+                "That which does not kill us makes us stronger",
+                "I have not failed",
+                "Be miserable. ...",
+                "The future belongs to those who believe in the beauty of their dreams.",
+                "I challenge you to make your life a masterpiece."
+        ]
+
+        function slider() {
+    let task = document.getElementById("texts");
+      task.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    
+  }
+  
+  setInterval(() => {
+    slider();
+  }, 3000);
+    </script>
+</body>
+</html>
